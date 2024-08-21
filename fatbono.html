@@ -5,12 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Fat Bono</title>
     <style>
-      h1 {
-        font-size: xx-large;
+      body>h1 {
+        font-size: 130px;
         font-weight: bold;
         text-align: center;
         background-color: skyblue;
-        color: brown;
       }
 
       @keyframes rotate {
@@ -35,6 +34,24 @@
     <br><br><br>
     <div style="display: flex; justify-content: center;">
       <img src="JFF/fatbono.jpeg" alt="fatbono" class="fat-bono">
+    </div>
+
+    <button type="button" class="btn btn-success position-fixed bottom-0 end-50 btn-lg" data-bs-toggle="modal" data-bs-target="#Fighting">CLICK</button>
+    <div class="modal" id="Fighting" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" style="font-weight: bold;">버튼을 누른 당신</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>오늘 하루도 화이팅!!!</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">행복</button>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
