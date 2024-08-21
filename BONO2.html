@@ -42,6 +42,10 @@
           transform: rotate(360deg);
           }
         }
+
+        .lhbutton:hover {
+          transform: scale(1.25);
+        }
     </style>
   </head>
   <body>
@@ -152,5 +156,25 @@
       </table>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <button type="button" class="btn btn-success position-fixed bottom-0 end-0 btn-lg" data-bs-toggle="modal" data-bs-target="#thanks">Like</button>
+    <!-- <button type="button" class="btn btn-danger position-fixed bottom-0 end-0">Hate</button> -->
+    <div class="modal" id="thanks" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">감사합니다!</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>다음주 평가는 100점 받을거에요!</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">행복</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
   </body>
 </html>
