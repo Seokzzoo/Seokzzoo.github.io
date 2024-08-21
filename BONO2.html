@@ -20,9 +20,27 @@
 
         /* img 태그에 애니메이션 적용 */
         .first-bono {
-            width: 200px;
-            height: auto;
-            animation: grow 2s forwards; /* 애니메이션 3초 동안 실행, 한 번만 실행 후 멈춤 */
+          width: 200px;
+          height: auto;
+          animation: grow 2s forwards; /* 애니메이션 3초 동안 실행, 한 번만 실행 후 멈춤 */
+        }
+        .small-bono {
+          width: 80px;
+          height: 80px;
+          animation: rotate 5s linear infinite;
+        }
+
+        .card-bono:hover {
+          transform: scale(1.25);
+        }
+
+        @keyframes rotate {
+        from {
+          transform: rotate(0deg);
+          }
+        to {
+          transform: rotate(360deg);
+          }
         }
     </style>
   </head>
@@ -45,6 +63,9 @@
         <p>안녕하세요. 보노보노 갤러리에 오신 걸 환영합니다. 제 이름은 보노보노입니다. 서울 4반의 수호신이죠.</p>
         <p>제 사진들을 즐겁게 보시고, 즐거우셨다면 후원 부탁드립니다.</p>
         <p>후원을 많이 해주신 건님 보형님 석주님 감사합니다.</p>
+        <br></br>
+
+        <p style="text-align: center; font-weight:900; color: blue;"><img src="JFF/BONOBONO.png" alt="bono" class="small-bono">      보노보노      <img src="JFF/BONOBONO.png" alt="bono" class="small-bono"></p>
       </div>
     </div>
     
@@ -74,7 +95,7 @@
     <div class="ct" style="display: flex;">
     <!-- Cards -->
       <div class="card" style="width: 18rem; ">
-        <img src="JFF/BONOBONO.png" class="card-img-top" alt="BONO" title="BONO">
+        <img src="JFF/BONOBONO.png" class="card-img-top card-bono" alt="BONO" title="BONO">
         <div class="card-body">
           <h5 class="card-title">보노보노</h5>
           <p class="card-text">안녕 나는 보노보노야<br>배고픈 나를 위해 후원해줘<br>월마다 만원만 내라</p>
@@ -103,7 +124,7 @@
           </div>
         </div>
       </div>
-      <table class="table" style="font-style:normal; font-weight: bold;">
+      <table class="table" style="font-style:normal; font-weight: bold; font-size: 20px;">
         <thead>
           <tr>
             <th scope="col">후원 순위</th>
