@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+
+      #wrapper {
+        /* 최소 100% 를 차지하도록 */
+        min-height: 100%;
+        margin-bottom: -50px;
+        padding-bottom: 100px;
+      }
+
+      .footer {
+        height: 50px;
+        background-color: black;
+        color: white;
+
+        /* 실제로 footer 에는 많이 안쓴다. */
+        /* 사용자 기준에서 계속 볼 필요가 없는 내용*/
+        /* position: fixed;
+      bottom: 0; */
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrapper">
+      <nav class="navbar navbar-expand-md navbar-fixed-bottom bg-body-tertiary">
+        <div class="container container-fluid">
+          <a class="navbar-brand" href="#">음악 스트리밍 사이트</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+              <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fa-solid fa-house"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-nowrap" href="#">아티스트</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-nowrap" href="#">플레이리스트</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-nowrap" href="#"><i class="fa-solid fa-star"></i></a>
+              </li>
+              <form class="d-flex" role="search">
+                <input
+                  class="form-control me-2"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                />
+                <button class="btn btn-outline-success  text-nowrap" type="submit">
+                  검색
+                </button>
+              </form>
+              <li class="nav-item">
+                <a class="nav-link text-nowrap" href="#">사용자 정보</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="container row mx-auto mt-5">
+        <!-- 사이드바 -->
+        <aside class="col-md-2">사이드바</aside>
+        <!-- 메인 영역 -->
+        <main class="col-md-10">
+          <h2>음악 스트리밍 서비스 환영</h2>
+
+          <section>
+            <i class="fa-solid fa-play"></i>
+            <i class="fa-solid fa-volume-high"></i>
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+            <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-bar" style="width: 25%"></div>
+            </div>
+            
+          </section>
+
+          <section class="row g-3">
+            <article class="col-12 col-sm-6 col-md-4">
+              <div class="card">
+                <img src="music.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Album1</h5>
+                  <p class="card-text">Album1</p>
+                  <a href="#" class="btn btn-primary">Play</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="col-12 col-sm-6 col-md-4">
+              <div class="card">
+                <img src="music.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Album2</h5>
+                  <p class="card-text">Album2</p>
+                  <a href="#" class="btn btn-primary">Play</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="col-12 col-sm-6 col-md-4">
+              <div class="card">
+                <img src="music.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Album3</h5>
+                  <p class="card-text">Album3</p>
+                  <a href="#" class="btn btn-primary">Play</a>
+                </div>
+              </div>
+            </article>
+            
+            <article class="col-12 col-sm-6 col-md-4">
+              <div class="card">
+                <img src="music.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Album4</h5>
+                  <p class="card-text">Album4</p>
+                  <a href="#" class="btn btn-primary">Play</a>
+                </div>
+              </div>
+            </article>
+            
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer border-2 border-top">
+      <span>&copy; 2024 음악 스트리밍 서비스</span>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
