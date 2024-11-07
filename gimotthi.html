@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button>CAT PUNCH</button>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
+    const URL = 'https://api.thecatapi.com/v1/images/search'
+    const btn = document.querySelector('button')
+
+    const getCats = function(){
+      axios({
+        method : 'get',
+        url : URL,
+      })
+        .then((response) => {
+          console.log(response)
+          console.log(response.data)
+          const imgUrl = response.data[0].url
+          const imgElem = document.createElement('img')
+          imgElem.setAttribute('src', imgUrl)
+          document.body.appendChild(imgElem)
+        })
+        .catch((error) => {
+          console.log(error)
+          console.log('Failed')
+        })
+        
+        console.log('Nyaong')
+    }
+
+    btn.addEventListener('click', getCats)
+  </script>
+</body>
+</html>

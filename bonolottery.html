@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .red{
+      color:red;
+      font-size: 200%;
+    }
+
+    .blue{
+      color:blue;
+      font-size: 200%;
+    }
+  </style>
+</head>
+  <body>
+    <h1>목숨담보 보노보노 복권</h1>
+    <img src="scaryfatbono.jpg" alt="fatbono" width=200 height=200><br>
+    <h2>이용 방법</h2>
+    <ul>
+      <li>당첨 번호를 먼저 받습니다.</li>
+      <li>행운 번호를 누릅니다. 최대 10번 이용 가능</li>
+      <li>단! 행운 번호를 누른 후 당첨이니? 버튼을 누르며 결과값을 확인합니다.</li>
+    </ul>
+    <button id="btn1">행운 번호 받기</button>
+    <button id="btn2">당첨 번호 받기</button>
+    <button id="btn3">당첨이니?</button>
+    <div></div>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+    <script>
+      const h1Tag = document.querySelector('h1')
+      const btn1 = document.querySelector('#btn1')
+      const btn2 = document.querySelector('#btn2')
+      const btn3 = document.querySelector('#btn3')
+      const divTag = document.querySelector('div')
+      let lucknumber = []
+      let winningnumber = []
+
+      const getLottery = function(event){
+        const numbers = _.range(1, 46)
+        const sixNumbers = _.sampleSize(numbers, 6)
+        // console.log(sixNumbers)
+        const ulTag = document.createElement('ul')
+        sixNumbers.forEach((number) => {
+          lucknumber.push(number)
+          const liTag = document.createElement('li')
+          liTag.textContent = number
+          ulTag.appendChild(liTag)
+        })
+        divTag.appendChild(ulTag)
+        // console.log(lucknumber)
+
+      }
+
+      const getLottery2 = function(event){
+        const numbers = _.range(1, 46)
+        const sixNumbers = _.sampleSize(numbers, 6)
+        // console.log(sixNumbers)
+        const ulTag = document.createElement('ul')
+        sixNumbers.forEach((number) => {
+          winningnumber.push(number)
+          const liTag = document.createElement('li')
+          liTag.textContent = number
+          ulTag.appendChild(liTag)
+        })
+        divTag.appendChild(ulTag)
+        // console.log(winningnumber)
+      }
+      
+      const isWinner = function(event){
+        if (_.isEqual(lucknumber, winningnumber)){
+        const p1 = document.createElement('p')
+        p1.textContent = '당첨입니다!'
+        p1.classList.add('blue')
+        divTag.appendChild(p1)
+      } else{
+        const p2 = document.createElement('p')
+        p2.textContent = '시네!'
+        p2.classList.add('red')
+        divTag.appendChild(p2)
+      }
+      }
+
+      btn1.addEventListener('click', getLottery)
+      btn2.addEventListener('click', getLottery2)
+      btn3.addEventListener('click', isWinner)
+    </script>
+  </body>
+</html>
